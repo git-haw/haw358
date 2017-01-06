@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="custom-wraper">
+	<!-- PAGE CONTENT BEGINS -->
+	<!-- /.row -->
+	<!-- PAGE CONTENT ENDS -->
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>会议列表</h2>
+
+			<ul class="nav navbar-right panel_toolbox">
+				<li style=""><button title="签到" class="bgMeetingSigninForm btn btn-de">
+						<i class="fa fa-sign-in"></i>&nbsp签到
+					</button></li>
+				<li style=""><button title="查看" class="viewMeetingForm btn btn-de">
+						<i class="fa fa-sign-in"></i>&nbsp查看报名
+					</button></li>
+				<li style=""><button title="编辑" class="editMeetingForm btn btn-de">
+						<i class="fa fa-cogs"></i>&nbsp编辑
+					</button></li>
+				<li style=""><button title="新增" class="addMeetingForm btn btn-de">
+						<i class="fa fa-plus-square"></i>&nbsp新增
+					</button></li>
+				<li style=""><button title="修改" class="modifyMeetingForm btn btn-de">
+						<i class="fa fa-edit"></i>&nbsp修改
+					</button></li>
+				<li style=""><button title="删除"
+						class="deleteMeetingForm btn btn-de">
+						<i class="fa fa-trash"></i>&nbsp删除
+					</button></li>
+				<li style=""><button title="发布"
+						class="publishMeetingForm btn btn-de">
+						<i class="fa fa-edit"></i>&nbsp发布
+					</button></li>
+			</ul>
+			<div class="col-md-3 col-sm-3 col-xs-12 pull-right top_search">
+				<div class="input-group">
+					<input type="text" class="form-control" id="searchText"
+						placeholder="请输入会议标题"> <span class="input-group-btn">
+						<button class="btn btn-default searchMeetingButton" type="button">查询</button>
+					</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="x_content">
+			<div class="grid_list" id="meeting_paging"></div>
+			<div class="grid_page" id="meeting_paging_page"></div>
+		</div>
+		<!-- end x_content-->
+	</div>
+</div>
+<script type="text/javascript">
+require(
+	['/static/primary/src/demo/demoList.js',
+        '/static/primary/src/demo/model/demoModel.js' ],
+	function(meetingListView, meetingModel) {
+		var meetingListView = new meetingListView({
+			el : $('.custom-wraper'),
+			model : new meetingModel()
+		});
+	}
+);
+</script>
+</body>
+</html>

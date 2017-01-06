@@ -1,9 +1,9 @@
 !(function () {
     // main.js
     require.config({
-        baseUrl: "primary/",
+        baseUrl: "/static/primary/",
         paths:{
-            "jquery" : "core/js/jquery-3.1.1",
+            "jquery" : "core/js/jquery-3.1.1.min",
             "jquery-ui" : "core/js/jquery-ui",
             "underscore" : "core/js/underscore",
             "backbone" : "core/js/backbone",
@@ -21,7 +21,8 @@
             "progressbar" : "plugins/progressbar/bootstrap-progressbar.min",
             "nicescroll" : "plugins/nicescroll/jquery.nicescroll.min",
             "datepicker" : "plugins/bootstrap-datepicker/js/bootstrap-datepicker",
-            "demo" : "customer/js/demo"
+            "demo" : "customer/js/demo",
+            "vue" : "https://unpkg.com/vue/dist/vue.js"
         },
         map: {
             '*': {
@@ -61,13 +62,11 @@
             "datetimepicker" : {
                 deps : [ 'jquery' , "css!../../plugins/bootstrap-datetimepicker/dist/css/bootstrap-datetimepicker.min"],
                 exports : 'datetimepicker'
+            },
+            "vue" : {
+                exports : 'vue'
             }
         }
     });
 
-    define(["jquery"], function ($) {
-        alert("main");
-        $("#haw").val("require js demo");
-    });
-    
 })();
