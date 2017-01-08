@@ -8,7 +8,6 @@
             "underscore" : "core/js/underscore",
             "backbone" : "core/js/backbone",
             "moment" : "core/js/moment",
-            "bootstrap" : "plugins/bootstrap-3.3.0/dist/js/bootstrap.min",
             "ztree" : "plugins/zTree_v3/js/jquery.ztree.core",
             "excheck" : "plugins/zTree_v3/js/jquery.ztree.excheck",
             "jquery-validate" : "plugins/form/jquery-validate",
@@ -30,12 +29,6 @@
             }
         },
         shim:{
-            'bootstrap-css' : [
-                "css!plugins/bootstrap-3.3.0/dist/css/bootstrap.min.css"
-            ],
-            'bootstrap-theme-css' : [
-                'css!plugins/bootstrap-3.3.0/dist/css/bootstrap-theme.min.css'
-            ],
             'jquery':{
                 exports: 'jquery'
             },
@@ -45,10 +38,6 @@
             'backbone':{
                 deps: ['underscore','jquery'],
                 exports: 'Backbone'
-            },
-            'bootstrap' : {
-                deps : ['jquery', 'bootstrap-css', 'bootstrap-theme-css' ],
-                exports : 'bootstrap'
             },
             'layer' : {
                 deps : [ 'jquery' , 'css!plugins/layer/skin/layer'],
