@@ -2,8 +2,10 @@ from django.shortcuts import render
 # from django.shortcuts import HttpResponse
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
 from .form import LoginForm
+from .models import Blog
+from django.template.loader import *
 
 # Create your views here.
 def user_login(request):
@@ -36,4 +38,17 @@ def home(request):
 
 # @login_required(login_url="/login/")
 def blog(request):
-    return render(request, "blog.html")
+    nav_bar = get_template('nav_bar.html')
+    print(nav_bar)
+    return render(request, "blog.html", {'nav_bar': nav_bar})
+
+def write_blog(request):
+    return render(request, 'blog.html')
+
+def save_blog(request):
+    blog = Blog()
+    title = request.POST['title']
+    content = request.POST['content']
+    blog.title = title
+    blog.content = content
+    blog.save()
