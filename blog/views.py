@@ -2,8 +2,9 @@ from django.shortcuts import render
 # from django.shortcuts import HttpResponse
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
 from .form import LoginForm
+from models import Blog
 
 # Create your views here.
 def user_login(request):
@@ -36,4 +37,5 @@ def home(request):
 
 # @login_required(login_url="/login/")
 def blog(request):
-    return render(request, "blog.html")
+    blog = Blog.objects.all()
+    return render(request, "blog.html", {'blog': blog})
