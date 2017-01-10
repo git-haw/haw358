@@ -9,10 +9,24 @@ body{
     background-repeat: repeat;
     background-image: url("/static/image/blog/bg6.jpg");
 }
+a{
+    color: #0f0f0f;
+    font-size: 12px;
+    font-family: Arial, "Microsoft Himalaya", 黑体, 宋体, sans-serif;
+    font-style: normal;
+    font-color: #ofofof;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
 .blog-titles{
     width: 60%;
+    height: 300px;
     padding-top: 30px;
     padding-bottom: 50px;
-    position: relative;
+    position: absolute;
     left: 10%;
+    top: 30%;
+    background-color: #fefefe;
 }
