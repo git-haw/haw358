@@ -2,6 +2,7 @@ from django.shortcuts import render
 # from django.shortcuts import HttpResponse
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
+from django.template.loader import *
 # from django.contrib.auth.decorators import login_required
 from .form import LoginForm
 from models import Blog
@@ -37,5 +38,12 @@ def home(request):
 
 # @login_required(login_url="/login/")
 def blog(request):
-    blog = Blog.objects.all()
-    return render(request, "blog.html", {'blog': blog})
+    nav_bar = render_to_string('nav_bar.html')
+    bl = Blog.objects.all()
+    return render(request, 'blog.html', {'nav_bar': nav_bar, 'blog': bl})
+
+def write_blog():
+    None
+
+def save_blog():
+    None

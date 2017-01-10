@@ -9,7 +9,7 @@ body{
     background-repeat: repeat;
     background-image: url("/static/image/blog/bg6.jpg");
 }
-.panel{
+.blog-titles{
     width: 60%;
     padding-top: 30px;
     padding-bottom: 50px;
