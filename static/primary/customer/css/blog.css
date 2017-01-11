@@ -21,6 +21,14 @@ a:hover{
     text-decoration: underline;
 }
 #content{
+    width: 100%;
     position: absolute;
     top: 10%;
+}
+#content-middle{
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #fefefe;
+    border-radius: 5px;
 }
