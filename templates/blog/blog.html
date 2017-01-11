@@ -6,23 +6,28 @@
     <link href="/static/primary/plugins/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" style="text/css"/>
     <link href="/static/primary/plugins/bootstrap-3.3.0/dist/css/bootstrap-theme.min.css" rel="stylesheet"
           style="text/css"/>
+    <link href="/static/primary/plugins/summernote/dist/summernote.css" rel="stylesheet" style="text/css"/>
     <link href="/static/primary/customer/css/blog.css" rel="stylesheet" style="text/css"/>
-    <link href="/static/primary/customer/css/write_blog.css" rel="stylesheet" style="text/css"/>
+    <link href="/static/primary/customer/css/write_blog2.css" rel="stylesheet" style="text/css"/>
+    <link href="/static/primary/customer/css/nav_bar.css" rel="stylesheet" style="text/css"/>
+    <link href="/static/primary/customer/css/blog_list.css" rel="stylesheet" style="text/css"/>
 </head>
 <body>
 <div id="container" class="container">
     <div id="header">{{ nav_bar }}</div>
     <div id="content">
-        <div id="content-middle">{{ blog_list }}</div>
+        <div id="content-middle">{{ content_middle }}</div>
         <div id="content-right"></div>
     </div>
     <div id="footer"></div>
-    {{ write_blog }}
 </div>
 
 
 <script src="/static/primary/core/js/require.js" data-main="/static/primary/customer/js/main"></script>
 <script type="application/javascript" src="/static/primary/core/js/jquery-3.1.1.min.js"></script>
 <script type="application/javascript" src="/static/primary/plugins/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+    require(['write_blog']);
+</script>
 </body>
 </html>

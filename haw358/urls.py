@@ -22,6 +22,7 @@ urlpatterns = [
     # url(r'^index/', views.index),
     url(r'^home/', views.home),
     url(r'^blog/', views.blog),
+    url(r'^write_blog/', views.write_blog),
     url(r'^save_blog/', views.save_blog),
     # url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}, name='login'),
     # url(r'^logout/$', 'django.contrib.auth.views.logout', {'template_name': 'logout.html'}, name='logout')

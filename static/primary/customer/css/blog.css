@@ -5,9 +5,9 @@
 }
 body{
     text-align: center;
-    background-size: 20%;
+    background-size: 50%;
     background-repeat: repeat;
-    background-image: url("/static/image/blog/bg6.jpg");
+    background-image: url("/static/image/blog/bg.jpg");
 }
 a{
     color: #0f0f0f;
@@ -20,13 +20,7 @@ a{
 a:hover{
     text-decoration: underline;
 }
-.blog-titles{
-    width: 60%;
-    height: 300px;
-    padding-top: 30px;
-    padding-bottom: 50px;
+#content{
     position: absolute;
-    left: 10%;
-    top: 30%;
-    background-color: #fefefe;
+    top: 10%;
 }
