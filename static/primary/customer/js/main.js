@@ -20,7 +20,6 @@
             "progressbar" : "plugins/progressbar/bootstrap-progressbar.min",
             "nicescroll" : "plugins/nicescroll/jquery.nicescroll.min",
             "datepicker" : "plugins/bootstrap-datepicker/js/bootstrap-datepicker",
-            "demo" : "customer/js/demo",
             "write_blog" : "customer/js/write_blog",
             "vue" : "https://unpkg.com/vue/dist/vue.js"
         },
