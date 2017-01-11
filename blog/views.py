@@ -7,6 +7,8 @@ from django.template.loader import *
 from .form import LoginForm
 from .models import Blog
 from django.views.decorators.csrf import csrf_exempt
+from haw358.settings import BASE_DIR
+import os
 
 
 # Create your views here.
@@ -46,8 +48,13 @@ def blog(request):
     nav_bar = render_to_string('blog/nav_bar.html')
     blog = Blog.objects.all()
     blog_list = render_to_string('blog/blog_list.html', context={'blog': blog})
-    write_blog = render_to_string('blog/write_blog1.html')
-    return render(request, 'blog/blog.html', {'nav_bar': nav_bar, 'blog_list': blog_list, 'write_blog': write_blog})
+    return render(request, 'blog/blog.html', {'nav_bar': nav_bar, 'content_middle': blog_list})
+
+
+def write_blog(request):
+    nav_bar = render_to_string('blog/nav_bar.html')
+    write_blog = render_to_string('blog/write_blog2.html')
+    return render(request, 'blog/blog.html', {'nav_bar': nav_bar, 'content_middle': write_blog})
 
 
 @csrf_exempt
@@ -59,3 +66,15 @@ def save_blog(request):
     blog.content = content
     blog.save()
     return HttpResponseRedirect('/blog/')
+
+
+@csrf_exempt
+def delete(request):
+    id = request.POST.get('id')
+    blog = Blog.objects.get(id=id)
+    blog.delete()
+
+
+def query(request):
+    id = request.POST.get('id')
+    blog = Blog.objects.get(id=id)

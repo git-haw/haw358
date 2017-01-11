@@ -21,6 +21,7 @@
             "nicescroll" : "plugins/nicescroll/jquery.nicescroll.min",
             "datepicker" : "plugins/bootstrap-datepicker/js/bootstrap-datepicker",
             "write_blog" : "customer/js/write_blog",
+            "summernote" : "plugins/summernote/dist/summernote.min",
             "vue" : "https://unpkg.com/vue/dist/vue.js"
         },
         map: {
@@ -60,6 +61,9 @@
             },
             "vue" : {
                 exports : 'vue'
+            },
+            "summernote" : {
+                exports : 'summernote'
             }
         }
     });
