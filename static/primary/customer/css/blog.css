@@ -20,15 +20,26 @@ a{
 a:hover{
     text-decoration: underline;
 }
+.container{
+    width: 100%;
+    position: relative;
+    magin: 0 auto;
+}
 #content{
     width: 100%;
-    position: absolute;
-    top: 10%;
 }
 #content-middle{
+    float: left;
     width: 60%;
     padding-top: 30px;
     padding-bottom: 50px;
     background-color: #fefefe;
     border-radius: 5px;
+}
+#content-right{
+    float: left;
+    width: 30%;
+}
+.clear{
+    clear: both;
 }

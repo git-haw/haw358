@@ -16,14 +16,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import auth
 from blog import views
+from django.core.urlresolvers import set_script_prefix
+from haw358.settings import SITE_URL
+
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     # url(r'^index/', views.index),
-    url(r'^home/', views.home),
-    url(r'^blog/', views.blog),
-    url(r'^write_blog/', views.write_blog),
-    url(r'^save_blog/', views.save_blog),
+    url(r'^home/', views.home, {}, 'home'),
+    url(r'^blog/', views.blog, {}, 'blog'),
+    url(r'^write_blog/', views.write_blog, {}, 'write_blog'),
+    url(r'^save_blog/', views.save_blog, {}, 'save_blog'),
     # url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}, name='login'),
     # url(r'^logout/$', 'django.contrib.auth.views.logout', {'template_name': 'logout.html'}, name='logout')
 ]
+
+set_script_prefix(SITE_URL)
