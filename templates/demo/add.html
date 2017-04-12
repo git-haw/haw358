@@ -6,122 +6,134 @@
 </head>
 <body>
 <div class="col-md-12 col-sm-12 col-xs-12">
-<div class="x_panel">
-<div class="form-wraper">
-	<form id="addMeetingForm" name="addMeetingForm" class="form-horizontal form-label-left"
-		action="<c:url value='/sys/meeting/saveMeeting.shtml'/>">
-		<input type="hidden" id="id" name="meetingFormMap.id" value="${meetingFormMap.id}">
+    <div class="x_panel">
+        <div class="form-wraper">
+            <form id="addMeetingForm" name="addMeetingForm" class="form-horizontal form-label-left"
+                  action="<c:url value='/sys/meeting/saveMeeting.shtml'/>">
+                <input type="hidden" id="id" name="meetingFormMap.id" value="${meetingFormMap.id}">
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">会议标题:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control" name="meetingFormMap.name" id="name"
-					value="${meetingFormMap.name}" maxlength="50">
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">会议标题:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control" name="meetingFormMap.name" id="name"
+                               value="${meetingFormMap.name}" maxlength="50">
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">开始时间:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss">
-				<input type="text" class="form-control" size="16" name="meetingFormMap.start_time" id="start_time" value="${meetingFormMap.start_time}" readonly>
-               	<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">开始时间:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime"
+                         data-date-format="yyyy-mm-dd hh:ii:ss">
+                        <input type="text" class="form-control" size="16" name="meetingFormMap.start_time"
+                               id="start_time" value="${meetingFormMap.start_time}" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">结束时间:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss">
-				<input type="text" class="form-control" size="16" name="meetingFormMap.end_time" id="end_time" value="${meetingFormMap.end_time}" readonly>
-               	<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">结束时间:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime"
+                         data-date-format="yyyy-mm-dd hh:ii:ss">
+                        <input type="text" class="form-control" size="16" name="meetingFormMap.end_time" id="end_time"
+                               value="${meetingFormMap.end_time}" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">会议场地:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control hide" name="meetingFormMap.address_id"
-					id="address_id" value="${meetingFormMap.address_id}">
-				<input type="text" class="form-control" name="address" id="address"
-					value="${meetingFormMap.address}" readonly>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-remove new-remove"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">会议场地:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control hide" name="meetingFormMap.address_id"
+                               id="address_id" value="${meetingFormMap.address_id}">
+                        <input type="text" class="form-control" name="address" id="address"
+                               value="${meetingFormMap.address}" readonly>
+                        <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-remove new-remove"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">会议联系人:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control hide" name="meetingFormMap.linkman_id"
-					id="linkman_id" value="${meetingFormMap.linkman_id}">
-				<input type="text" class="form-control" name="linkmam" id="linkman"
-					value="${meetingFormMap.linkman}" readonly>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-remove new-remove"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">会议联系人:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control hide" name="meetingFormMap.linkman_id"
+                               id="linkman_id" value="${meetingFormMap.linkman_id}">
+                        <input type="text" class="form-control" name="linkmam" id="linkman"
+                               value="${meetingFormMap.linkman}" readonly>
+                        <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-remove new-remove"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">举办单位:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control" name="meetingFormMap.host_unit"
-					id="host_unit" value="${meetingFormMap.host_unit}" maxlength="50">
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">举办单位:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control" name="meetingFormMap.host_unit"
+                               id="host_unit" value="${meetingFormMap.host_unit}" maxlength="50">
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">指导单位:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control" name="meetingFormMap.guide_unit"
-					id="guide_unit" value="${meetingFormMap.guide_unit}" maxlength="50">
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">指导单位:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control" name="meetingFormMap.guide_unit"
+                               id="guide_unit" value="${meetingFormMap.guide_unit}" maxlength="50">
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">允许报名人数:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<input type="text" class="form-control" name="meetingFormMap.registration_count"
-					id="registration_count" value="${meetingFormMap.registration_count}">
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">允许报名人数:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <input type="text" class="form-control" name="meetingFormMap.registration_count"
+                               id="registration_count" value="${meetingFormMap.registration_count}">
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">报名模式:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<select class="form-control" name="meetingFormMap.registration_mode"
-					id="registration_mode" value="${meetingFormMap.registration_mode}">
-					<option value="1">先到先得</option>
-					<option value="2">择优选择</option>
-				</select>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">报名模式:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <select class="form-control" name="meetingFormMap.registration_mode"
+                                id="registration_mode" value="${meetingFormMap.registration_mode}">
+                            <option value="1">先到先得</option>
+                            <option value="2">择优选择</option>
+                        </select>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">报名截止时间:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss">
-				<input type="text" class="form-control" size="16" name="meetingFormMap.registration_closing_time" id="registration_closing_time" value="${meetingFormMap.registration_closing_time}" readonly>
-               	<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">报名截止时间:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime"
+                         data-date-format="yyyy-mm-dd hh:ii:ss">
+                        <input type="text" class="form-control" size="16"
+                               name="meetingFormMap.registration_closing_time" id="registration_closing_time"
+                               value="${meetingFormMap.registration_closing_time}" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">签到开始时间:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss">
-				<input type="text" class="form-control" size="16" name="meetingFormMap.sign_up_time" id="sign_up_time" value="${meetingFormMap.sign_up_time}" readonly>
-                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-			</div>
-		</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">签到开始时间:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group date form_datetime"
+                         data-date-format="yyyy-mm-dd hh:ii:ss">
+                        <input type="text" class="form-control" size="16" name="meetingFormMap.sign_up_time"
+                               id="sign_up_time" value="${meetingFormMap.sign_up_time}" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
 
-		<div class="item form-group col-md-12 col-sm-12 col-xs-12">
-			<label class="control-label col-md-3 col-sm-3 col-xs-12">会议简介:</label>
-			<div class="col-md-8 col-sm-8 col-xs-12 input-group">
-				<textarea class="form-control" name="meetingFormMap.introduction" id="introduction" maxlength="500">${meetingFormMap.introduction}</textarea>
-			</div>
-		</div>
-	</form>
-</div>
-</div>
+                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">会议简介:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12 input-group">
+                        <textarea class="form-control" name="meetingFormMap.introduction" id="introduction"
+                                  maxlength="500">${meetingFormMap.introduction}</textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>

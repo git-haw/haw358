@@ -1,0 +1,36 @@
+<div id="blog_content" class="entry-asset">
+    <div class="asset-header">
+        <div class="asset-nav entry-nav">
+            <div class="entry-location">
+                <ul>
+                    {% for item in near_blogs %}
+                        <li>
+                            {% if forloop.first and item %}
+                                上一篇：
+                                <a href="/blog/{{ item.add_time.year }}/{{ item.add_time.month }}/{{ item.route_name }}.html" title="{{ item.title }}">{{ item.title }}</a>
+                            {% elif forloop.last and item %}
+                                下一篇：
+                                <a href="/blog/{{ item.add_time.year }}/{{ item.add_time.month }}/{{ item.route_name }}.html" title="{{ item.title }}">{{ item.title }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="entry-categories">
+                <p>分类：<a href="#">{{ blog.category.name }}</a></p>
+            </div>
+        </div>
+    </div>
+    <article>
+        <h1 id="page-title" class="asset-name entry-title">{{ blog.title }}</h1>
+        <div class="asset-meta">
+            <p class="author">作者： <a class="fn url" href="http://www.haw358.top">黄爱伟</a></p>
+            <p>日期： <a href="http://www.ruanyifeng.com/blog/2017/03/">
+                <abbr class="published" title="{{ blog.add_time }}">{{ blog.add_time.year }}年{{ blog.add_time.month }}月{{ blog.add_time.day }}日</abbr></a>
+            </p>
+        </div>
+        <div id="main-content" class="asset-content entry-content">
+            {{ blog.content|safe }}
+        </div>
+    </article>
+</div>

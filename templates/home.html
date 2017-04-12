@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>黄爱伟的个人网站 - Huang AiWei's Personal Website</title>
-    <link href="/static/primary/customer/css/home.css" rel="stylesheet" style="text/css" />
-</head>
-<body>
-<div id="container">
-    <div id="container-inner">
-        <div id="header">
-            <div id="header-inner">
-                <div id="header-content">
-                    <h2>黄爱伟的个人网站</h2>
-                    <p>Huang AiWei's Personal Website</p>
+{% extends 'base.html' %}
+{% block title %}
+    黄爱伟的个人网站 - Huang AiWei's Personal Website
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="/static/primary/customer/css/home.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div id="container">
+        <div id="container-inner">
+            <div id="header">
+                <div id="header-inner">
+                    <div id="header-content">
+                        <h2>黄爱伟的个人网站</h2>
+                        <p>Huang AiWei's Personal Website</p>
+                    </div>
+                    <hr>
                 </div>
-                <hr>
             </div>
-        </div>
-        <div id="content">
-            <div id="content-inner">
-                <div id="alpha">
-                    <div id="alpha-inner">
-                        <div id="page-alpha">
-                            <p>» <!-- <a href="docs/">Articles</a> | -->
-                                <a href="{% url 'blog' %}">Blog</a> /
-                                <a href="#">About</a>
-                            </p>
+            <div id="content">
+                <div id="content-inner">
+                    <div id="alpha">
+                        <div id="alpha-inner">
+                            <div id="page-alpha">
+                                <p>»
+                                    <a href="{% url 'blog' %}">Blog</a> /
+                                    <a href="#">About</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="beta">
-                    <div id="beta-inner"></div>
+                    <div id="beta">
+                        <div id="beta-inner"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="footer">
-            <div id="footer-inner">
-                <div id="footer-content">
-                    <p></p>
+            <div id="footer">
+                <div id="footer-inner">
+                    <div id="footer-content">
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+{% endblock %}

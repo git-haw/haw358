@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}
-    黄爱伟的日志
+    {{ blog.title }}
 {% endblock %}
 {% block style %}
     <link href="/static/primary/customer/css/blog.css" rel="stylesheet" style="text/css"/>
 {% endblock %}
 {% block body %}
-    <body id="blog" class="two-columns">
+    <body id="blog" class="one-column">
     {{ container }}
     </body>
 {% endblock %}

@@ -119,3 +119,5 @@ STATICFILES_DIRS = (
 )
 
 SITE_URL = 'http://www.haw358.top'
+
+LOGIN_URL = '/login/'

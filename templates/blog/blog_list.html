@@ -1,10 +1,15 @@
-<div class="panel panel-default">
-    <div class="panel-body">
-        {% for item in blog %}
-            <p>
-                <a href="#">{{ item.title }}</a>
-            </p>
+<div id="homepage">
+    <h3>最新文章</h3>
+    <ul>
+        {% for item in blogs %}
+            <li>
+                <span>{{ item.add_time.year }}年{{ item.add_time.month }}月{{ item.add_time.day }}日 » </span>
+                <a href="/blog/{{ item.add_time.year }}/{{ item.add_time.month }}/{{ item.route_name }}.html">{{ item.title }}</a>
+                {% if user.is_authenticated %}
+                    <a href="/admin/write_blog/{{ item.id }}">编写</a>
+                    <a href="/admin/delete/{{ item.id }}">删除</a>
+                {% endif %}
+            </li>
         {% endfor %}
-    </div>
+    </ul>
 </div>
-
